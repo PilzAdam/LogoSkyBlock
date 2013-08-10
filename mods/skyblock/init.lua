@@ -37,6 +37,16 @@ minetest.register_craft({
 	recipe = "default:tree",
 })
 
+minetest.register_chatcommand("spawn", {
+	params = "<none>",
+	description = "Respawn",
+	privs = {},
+	func = function(name, param)
+		local player = minetest.get_player_by_name(name)
+		player:setpos({x=0, y=0, z=0})
+	end,
+})
+
 minetest.register_on_generated(function(minp, maxp, blockseed)
 	if minp.x == -32 and minp.y == -32 and minp.z == -32 and
 		maxp.x == 47 and maxp.y == 47 and maxp.z == 47 then

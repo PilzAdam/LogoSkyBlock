@@ -1,6 +1,5 @@
 --CrushingFurnace mod by sfan5
---v1.0
-
+--v1.1
 
 local function get_furnace_active_formspec(pos, percent)
 	local formspec =
